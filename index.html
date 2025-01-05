@@ -329,7 +329,7 @@
                 예금주 김판중 
                 <span 
                     class="font-semibold text-gray-1000 cursor-pointer hover:text-blue-500" 
-                    onclick="copyAccountNumber('1002-846-891184')">
+                    onclick="copyAccountNumber('1002-846-891184'); sendCopyEvent('신랑측', '우리은행 1002-846-891184')">
                     우리은행 1002-846-891184
                 </span>
             </p>
@@ -339,7 +339,7 @@
                 예금주 강동수 
                 <span 
                     class="font-semibold cursor-pointer hover:text-pink-500" 
-                    onclick="copyAccountNumber('959-02-314871')">
+                    onclick="copyAccountNumber('959-02-314871'); sendCopyEvent('신부측', '농협 959-02-314871')">
                     농협 959-02-314871
                 </span>
             </p>
@@ -348,7 +348,7 @@
                 예금주 김경숙 
                 <span 
                     class="font-semibold cursor-pointer hover:text-green-500" 
-                    onclick="copyAccountNumber('302-0452-2072-61')">
+                    onclick="copyAccountNumber('302-0452-2072-61'); sendCopyEvent('신부측', '농협 302-0452-2072-61')">
                     농협 302-0452-2072-61
                 </span>
             </p>
@@ -357,7 +357,7 @@
                 예금주 강소담 
                 <span 
                     class="font-semibold cursor-pointer hover:text-purple-500" 
-                    onclick="copyAccountNumber('981-02-320474')">
+                    onclick="copyAccountNumber('981-02-320474'); sendCopyEvent('신부측', '농협 981-02-320474')">
                     농협 981-02-320474
                 </span>
             </p>
@@ -442,6 +442,16 @@
                 .catch(err => {
                     console.error('계좌 복사에 실패했습니다:', err);
                 });
+        }
+
+        // GA 이벤트 전송
+        function sendCopyEvent(owner, account) {
+            gtag('event', 'copy_account', {
+            'event_category': 'Account Copy',
+            'event_label': owner, // 예: 신랑측
+            'value': account // 예: 우리은행 1002-846-891184
+            });
+            console.log(`복사 이벤트 트래킹: ${owner} - ${account}`);
         }
 
 
