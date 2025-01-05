@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>판중❣️소담 결혼식에 초대합니다</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@heroicons/react@2.0.13/24/outline/index.js" defer></script>
 
@@ -40,7 +42,7 @@
         }
 
         body {
-            background: url('background_2.jpeg');
+            background: url('background_4.jpeg');
             /* font-family: 'MN'; */
             /* src: url('mn.ttf') format('truetype'); mail.html과 같은 경로에 있을 경우 상대 경로로 지정 */
             font-family: 'Sungsil', serif;
@@ -100,6 +102,19 @@
                     /* 약간 더 진한 핑크 */
                     rgba(255, 182, 193, 0.8) 6px);
         }
+
+
+        .styled-text-1 {
+            text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.6), -1px -1px 2px rgba(255, 182, 193, 0.6), 1px -1px 2px rgba(255, 182, 193, 0.6), -1px 1px 2px rgba(255, 182, 193, 0.6);
+            color: #000;
+            /* 글자 색상은 그대로 */
+        }
+
+        .styled-text-2 {
+            text-shadow: 1px 1px 2px rgba(173, 216, 230, 0.6), -1px -1px 2px rgba(173, 216, 230, 0.6), 1px -1px 2px rgba(173, 216, 230, 0.6), -1px 1px 2px rgba(173, 216, 230, 0.6);
+            color: #000;
+            /* 글자 색상은 그대로 */
+        }
     </style>
 
 </head>
@@ -132,14 +147,19 @@
             <h2 class="mt-10 text-2xl md:text-3xl font-bold text-gray-700">늘 곁에서 아껴준 <br> 고마운 분들을 초대합니다</h2>
 
             <p class="mt-4 text-lg text-gray-600">
-                <b class="styled-text">본식</b></strong> <br>2025년 2월 15일 <span class="text-blue-500">토요일</span>, <br>오후
-                12:00
+                <b class="styled-text">본식</b></strong> <br>2025년 2월 15일 <span
+                    class="styled-text-2 text-blue-500">토요일</span>,
+                <br>
+            <p class="styled-text-2">오후 12:00</p>
             </p>
-            <p class="text-lg text-gray-700">전주 알펜시아 웨딩홀 1층 마리아주홀</p> <!-- 장소 아이콘 넣기-->
+            <p class="text-lg text-gray-700 ">전주 알펜시아 웨딩홀 1층 마리아주홀</p> <!-- 장소 아이콘 넣기-->
 
 
             <p class="mt-4 text-lg text-gray-600">
-                <b class="styled-text-pink">피로연</b> <br> 2025년 2월 23일 <span class="text-red-500">일요일</span>,<br> 오전 11:00 ~ 오후 5:00
+                <b class="styled-text-pink">피로연</b> <br> 2025년 2월 23일 <span
+                    class="styled-text-1 text-red-500">일요일</span>,
+                <br>
+            <p class="styled-text-1">오전 11:00 ~ 오후 5:00</p>
             </p>
             <p class="text-lg text-gray-700">제주시 아스타호텔 3층 코스모스홀</p> <!-- 장소 아이콘 넣기-->
 
@@ -208,25 +228,43 @@
 
             <p class="mt-4 text-xl text-gray-600 cursor-pointer hover:text-blue-500 transition" id="copyAddress"
                 onclick="copyToClipboard()">
-                <span class="text-blue-500">본식</span><br> 전주 알펜시아 웨딩홀 <b>1층 마리아주홀,</b> <br>
-                <span class="text-base"> 전주시 완산구 모악로 4653,</span> <Br> 063-225-6080
+                <span class="mt-2 text-blue-500">본식</span>
+                <br> 전주 알펜시아 웨딩홀 <b>1층 마리아주홀</b>
+                <br>
+                <span class="text-base"> 전북 전주시 완산구 모악로 4653 알펜시아컨벤션앤코리아푸드</span> 
+                <i class="fa fa-copy"></i>
+                <Br>
             </p>
+            <p class="mt-2">
+            <a href="tel:063-225-6080" class="text-xl text-gray-600 hover:text-blue-700">
+                <i class="fa fa-phone"></i> 063-225-6080
+            </a></p>
+
 
             <p class="mt-6 text-xl text-gray-600 cursor-pointer hover:text-blue-500 transition" id="copyAddress"
                 onclick="copyToClipboard2()">
-                <span class="text-pink-500">피로연</span> <Br>제주 아스타호텔 <B>3층 코스모스홀,</B> <br>
-                <span class="text-base"> 제주 제주시 서사로 129 ASTAR HOTEL,</span> <Br> 064-710-1100
+                <span class="text-pink-500">피로연</span>
+                 <Br>제주 아스타호텔 <B>3층 코스모스홀</B> 
+                <br>
+                <span class="text-base"> 제주 제주시 서사로 129 ASTAR HOTEL</span>
+                <i class="fa fa-copy"></i>
+            </p>
+            <p class="mt-2">
+
+            <a href="tel:064-710-1100" class="ml-4 text-xl text-gray-600 hover:text-blue-700">
+                <i class="fa fa-phone"></i> 064-710-1100
+            </a>
             </p>
 
 
             <div class="mt-6 py-12 px-6">
                 <h2 class="text-2xl font-bold text-black-700">연락처</h2>
                 <div class="mt-4 text-lg text-gray-600 flex justify-between items-start">
-        
+
                     <div class="w-1/2">
                         <span class="text-blue-800">신랑</span>
                         <br>
-                        <span >김판중</span>
+                        <span>김판중</span>
                         <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
                         <br>
                         <span style="margin-left: 2%;">아버님</span>
@@ -235,7 +273,7 @@
                         <span style="margin-left: 2%;">어머님</span>
                         <a href="tel:010-1234-*1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
                     </div>
-            
+
                     <div class="w-1/2">
                         <span class="text-pink-500">신부</span>
                         <br>
@@ -248,12 +286,12 @@
                         <span style="margin-left: 2%;">어머님</span>
                         <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
                     </div>
-            
+
                 </div>
             </div>
         </div>
 
-        
+
 
         <div class="text-center">
             <div class="mt-8">
