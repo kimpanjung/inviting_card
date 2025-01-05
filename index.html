@@ -11,11 +11,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WTZS58B02C"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-WTZS58B02C');
+        gtag('config', 'G-WTZS58B02C');
     </script>
 
     <style>
@@ -23,13 +23,15 @@
 
         @font-face {
             font-family: 'Sungsil';
-            src: url('ChosunCentennial_ttf.ttf') format('truetype'); /* mail.html과 같은 경로에 있을 경우 상대 경로로 지정 */
+            src: url('ChosunCentennial_ttf.ttf') format('truetype');
+            /* mail.html과 같은 경로에 있을 경우 상대 경로로 지정 */
             font-weight: normal;
             font-style: normal;
         }
 
 
-        h1, h2 {
+        h1,
+        h2 {
             font-family: 'Sungsil', sans-serif;
             /* font-family: 'MN'; */
             font-weight: normal;
@@ -38,16 +40,66 @@
         }
 
         body {
-             background: url('background_2.jpeg');
+            background: url('background_2.jpeg');
             /* font-family: 'MN'; */
             /* src: url('mn.ttf') format('truetype'); mail.html과 같은 경로에 있을 경우 상대 경로로 지정 */
             font-family: 'Sungsil', serif;
             font-weight: normal;
             font-style: normal;
-                    
-
         }
 
+
+        .styled-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .styled-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            /* 텍스트 바로 아래 */
+            left: 0;
+            width: 100%;
+            height: 10px;
+            /* 밑줄 두께 */
+            z-index: -1;
+            /* 텍스트 위로 올라오지 않도록 */
+            border-radius: 5px;
+            /* 부드러운 끝 처리 */
+
+            /* 파스텔 하늘색 + 색연필 느낌 */
+            background: repeating-linear-gradient(-45deg,
+                    rgba(173, 216, 230, 0.8) 0%,
+                    /* 연한 하늘색 */
+                    rgba(173, 216, 230, 0.6) 3px,
+                    /* 약간 진한 하늘색 */
+                    rgba(173, 216, 230, 0.8) 6px);
+        }
+
+        /* 분홍색 스타일 */
+        .styled-text-pink {
+            position: relative;
+            display: inline-block;
+        }
+
+        .styled-text-pink::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            /* 밑줄 두께 */
+            z-index: -1;
+            border-radius: 5px;
+            background: repeating-linear-gradient(-45deg,
+                    rgba(255, 182, 193, 0.8) 0%,
+                    /* 연한 핑크색 */
+                    rgba(255, 105, 180, 0.6) 3px,
+                    /* 약간 더 진한 핑크 */
+                    rgba(255, 182, 193, 0.8) 6px);
+        }
     </style>
 
 </head>
@@ -70,35 +122,34 @@
 
             <div class="mt-8">
                 <img src="DSC03619.JPG" alt="웨딩 이미지" class="w-full max-w-md mx-auto rounded-lg shadow-lg"
-                loading="lazy">
+                    loading="lazy">
             </div>
 
 
             <div class="mt-6 w-16 h-[1px] bg-gray-400 mx-auto"></div>
             <!-- <h2 class="mt-4 text-2xl md:text-3xl font-bold text-gray-700">소중한 날, 함께 해주시면 감사하겠습니다.</h2> -->
             <!-- <p class="mt-6 text-gray-600 font-medium">늘 곁에서 아껴준 고마운 분들을 초대합니다</p> -->
-            <h2 class="mt-10 text-2xl md:text-3xl font-bold text-gray-700">늘 곁에서 아껴준 고마운 분들을 <br> 초대합니다</h2>
+            <h2 class="mt-10 text-2xl md:text-3xl font-bold text-gray-700">늘 곁에서 아껴준 <br> 고마운 분들을 초대합니다</h2>
 
-            <p class="mt-4 text-lg text-gray-500">
-                <b>본식</b> <br>2025년 2월 15일 <span class="text-blue-500">토요일</span>, <br>오후 12:00
+            <p class="mt-4 text-lg text-gray-600">
+                <b class="styled-text">본식</b></strong> <br>2025년 2월 15일 <span class="text-blue-500">토요일</span>, <br>오후
+                12:00
             </p>
-            <p class="text-lg text-gray-500">전주 알펜시아 웨딩홀 1층 마리아주홀</p> <!-- 장소 아이콘 넣기-->
+            <p class="text-lg text-gray-700">전주 알펜시아 웨딩홀 1층 마리아주홀</p> <!-- 장소 아이콘 넣기-->
 
 
-            <p class="mt-4 text-lg text-gray-500">
-                <b>피로연</b> <br> 2025년 2월 23일 <span class="text-red-500">일요일</span>,<br> 오전 11:00 ~ 오후 5:00
+            <p class="mt-4 text-lg text-gray-600">
+                <b class="styled-text-pink">피로연</b> <br> 2025년 2월 23일 <span class="text-red-500">일요일</span>,<br> 오전 11:00 ~ 오후 5:00
             </p>
-            <p class="text-lg text-gray-500">제주시 아스타호텔 3층 코스모스홀</p> <!-- 장소 아이콘 넣기-->
+            <p class="text-lg text-gray-700">제주시 아스타호텔 3층 코스모스홀</p> <!-- 장소 아이콘 넣기-->
 
             <!-- <div class="mt-6 border-t border-gray-300"></div> -->
 
-            <!-- <div class="mt-8">
-                <img src="DSC03841.JPG" alt="웨딩 이미지"
+            <div class="mt-8">
+                <!-- <img src="DSC03841.JPG" alt="웨딩 이미지"
                     class="w-full max-w-md mx-auto rounded-lg shadow-lg"
-                    loading="lazy">
-            </div> -->
-
-
+                    loading="lazy"> -->
+            </div>
         </div>
     </section>
 
@@ -130,7 +181,7 @@
                     loading="lazy">
             </div> -->
 
-            
+
 
             <!-- <div class="mt-6 border-t border-gray-300"></div> -->
         </div>
@@ -139,17 +190,15 @@
     <!-- 혼주 안내 섹션 -->
     <section class="py-12 px-6">
         <div class="text-center">
-            
             <h2 class="text-2xl font-bold text-gray-700">혼주</h2>
-            <p class="mt-4 text-gray-600 leading-relaxed">
-                김용보 · 이해자의 차남 판중
-            </p>
-
-            <p class="text-gray-600 leading-relaxed">
-                강동수 · 김경숙의 장녀 소담
+            <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+                김용보 · 이해자의 차남, 판중 <br>
+                강동수 · 김경숙의 장녀, 소담
             </p>
         </div>
     </section>
+
+    <div class="mt-2 w-16 h-[1px] bg-gray-400 mx-auto"></div>
 
 
     <!-- Section 3 : 오시는 길-->
@@ -157,53 +206,54 @@
         <div class="text-center">
             <h2 class="text-2xl font-bold text-gray-700">오시는 길</h2>
 
-            <p class="mt-4 text-gray-600 cursor-pointer hover:text-blue-500 transition" id="copyAddress"
+            <p class="mt-4 text-xl text-gray-600 cursor-pointer hover:text-blue-500 transition" id="copyAddress"
                 onclick="copyToClipboard()">
-                본식장 전주 알펜시아 웨딩홀, 1층 라벤더홀 <br>
-                전북 전주시 완산구 모악로 4653, 063-225-6080
+                <span class="text-blue-500">본식</span><br> 전주 알펜시아 웨딩홀 <b>1층 마리아주홀,</b> <br>
+                <span class="text-base"> 전주시 완산구 모악로 4653,</span> <Br> 063-225-6080
             </p>
 
-            <p class="mt-4 text-gray-600 cursor-pointer hover:text-blue-500 transition" id="copyAddress"
+            <p class="mt-6 text-xl text-gray-600 cursor-pointer hover:text-blue-500 transition" id="copyAddress"
                 onclick="copyToClipboard2()">
-                제주 아스타호텔 3층 코스모스홀 <br>
-                제주 제주시 서사로 129 ASTAR HOTEL, 064-710-1100
+                <span class="text-pink-500">피로연</span> <Br>제주 아스타호텔 <B>3층 코스모스홀,</B> <br>
+                <span class="text-base"> 제주 제주시 서사로 129 ASTAR HOTEL,</span> <Br> 064-710-1100
             </p>
 
-            <div class="mt-6 w-16 h-[1px] bg-gray-400 mx-auto"></div>
 
-            <div class="mt-6">
+            <div class="mt-6 py-12 px-6">
                 <h2 class="text-2xl font-bold text-black-700">연락처</h2>
-                <div class="mt-4 text-gray-600 flex justify-center items-center">
-                    <span>신랑 김판중</span>
-                    <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">
-                        📞 💬 |
-                    </a>
-                    <span>아버님 </span>
-                    <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">
-                        📞 💬 |
-                    </a>
-                    <span>어머님 </span>
-                    <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">
-                        📞 💬
-                    </a>
+                <div class="mt-4 text-lg text-gray-600 flex justify-between items-start">
+        
+                    <div class="w-1/2">
+                        <span class="text-blue-800">신랑</span>
+                        <br>
+                        <span >김판중</span>
+                        <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
+                        <br>
+                        <span style="margin-left: 2%;">아버님</span>
+                        <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
+                        <br>
+                        <span style="margin-left: 2%;">어머님</span>
+                        <a href="tel:010-1234-*1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <span class="text-pink-500">신부</span>
+                        <br>
+                        <span>강소담</span>
+                        <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
+                        <br>
+                        <span style="margin-left: 2%;">아버님</span>
+                        <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
+                        <br>
+                        <span style="margin-left: 2%;">어머님</span>
+                        <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">📞 💬</a>
+                    </div>
+            
                 </div>
-                <div class="mt-4 text-gray-600 flex justify-center items-center">
-                    <span>신부 강소담</span>
-                    <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">
-                        📞 💬 |
-                    </a>
-                    <span> 아버님 </span>
-                    <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">
-                        📞 💬 |
-                    </a>
-                    <span>어머님 </span>
-                    <a href="tel:010-1234-1234" class="ml-2 text-gray-500 hover:text-blue-700">
-                        📞 💬
-                    </a>
-                </div>
-
             </div>
         </div>
+
+        
 
         <div class="text-center">
             <div class="mt-8">
@@ -259,9 +309,9 @@
 
         <div class="flex justify-center items-center space-x-2">
             <p class="text-xs text-gray-400">&copy; Designed by</p>
-            <img src="cony.png" alt="Cony" class="h-5 w-auto" style="margin-left: 0;" >
+            <img src="cony.png" alt="Cony" class="h-5 w-auto" style="margin-left: 0;">
 
-          </div>
+        </div>
 
     </footer>
 
