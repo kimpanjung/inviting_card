@@ -138,6 +138,11 @@
         #uniqueImage.visible {
             opacity: 1;
         }
+
+        .swiper-container {
+            position: static;
+            overflow: hidden;
+        }
     </style>
 
 </head>
@@ -526,7 +531,7 @@
             // 공유 기능 미지원 브라우저
                 // 비차단 메시지를 사용자에게 보여줌
                 console.warn('공유 기능이 지원되지 않는 브라우저입니다.');
-                displayNotification('공유 기능이 지원되지 않는 브라우저입니다. 주소를 복사합니다.');
+                displayNotification('공유 기능이 지원되지 않는 브라우저입니다. 모바일 청접장 주소를 복사합니다.');
 
                 navigator.clipboard.writeText(shareData.url)
                     .then(() => {
@@ -578,6 +583,12 @@
 
         document.addEventListener("DOMContentLoaded", function () {
         const swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            hashNavigation: false, // 해시 내비게이션 비활성화
+            
             loop: true, // 슬라이드 반복
             effect: 'fade',
             pagination: {
