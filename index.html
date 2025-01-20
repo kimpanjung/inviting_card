@@ -519,6 +519,8 @@
                 text: '2025년 2월 15일, 판중&소담의 결혼식에 초대합니다! 피로연은 2025년 2월 23일 제주도에서 열립니다.',
                 url: "https://kimpanjung.github.io/inviting_card/"//window.location.href
             };
+            const fullText = `${shareData.title}\n\n${shareData.text}\n\n${shareData.url}`;
+
 
             if (navigator.share) {
                 navigator.share(shareData).then(() => {
@@ -528,12 +530,12 @@
                 });
             } else {
                 // alert('공유 기능이 지원되지 않는 브라우저입니다.');
-            // 공유 기능 미지원 브라우저
+                // 공유 기능 미지원 브라우저
                 // 비차단 메시지를 사용자에게 보여줌
                 console.warn('공유 기능이 지원되지 않는 브라우저입니다.');
                 // displayNotification('공유 기능이 지원되지 않는 브라우저입니다. 모바일 청접장 주소를 복사합니다.');
 
-                navigator.clipboard.writeText(shareData.url)
+                navigator.clipboard.writeText(fullText)
                     .then(() => {
                         alert('모바일 청첩장의 주소가 클립보드에 복사되었습니다!');
                         displayNotification('모바일 청첩장의 주소가 클립보드에 복사되었습니다!');
